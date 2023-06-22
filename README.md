@@ -150,11 +150,11 @@ void callback(char* topic, byte* payload, unsigned int length) {
 ```
 2. Instalamos la libreria de  **ArdiunoJson** y **PubSubClient** como se muestra en la siguente imagen, dando clic en (Library Manager) y despues en el simbolo de (+)
 
-![]()
+![](https://github.com/Omarcollado23/PRACTICA-9-RELEVADOR-NODE-RED/blob/main/LIBRERIA1.1.png?raw=true)
 
 3. Hacemos las conexiones el **ESP32** con el RELAY como se muestra en la siguiente imagen:
 
-![]()
+![](https://github.com/Omarcollado23/PRACTICA-9-RELEVADOR-NODE-RED/blob/main/conexiones.png?raw=true)
 
 ### Instrucciónes de operación
 
@@ -171,76 +171,30 @@ Abrimos una nueva pestaña en el navegador que utilizas e insertamos en la barra
 
 1. Colocamos bloque ```switch```. y configuramos así como se muestra en la imagen.
 
-![]()
-
-Colocamos bloque ```mqqtt out```.
-2. Configurar el bloque con el puerto mqtt con el IP ```44.195.202.69:1883``` como se muestra en la imagen.
-
-![](https://github.com/Omarcollado23/PRACTICA-7-CON-ULTRASONICO/blob/main/%23servidor.png?raw=true)
-
-3. Colocar el bloque json y configurarlo como se muestra en la imagen.
-
-![](https://github.com/DiegoJm10/dht22-con-node-red/blob/main/JSON.png?raw=true)
-
-Colocamos tres bloques function y lo configuramos con el siguente codigo.
-
-```
-msg.payload = msg.payload.TEMPERATURA;
-msg.topic = "TEMPERATURA";
-return msg;
-```
-
-![](https://github.com/Omarcollado23/PRACTICA-6-DHT22-CON-NODE-RED/blob/main/conf%20temp.png?raw=true)
+![](https://github.com/Omarcollado23/PRACTICA-9-RELEVADOR-NODE-RED/blob/main/conf%20switch.png?raw=true)
 
 
-```
-msg.payload = msg.payload.HUMEDAD;
-msg.topic = "HUMEDAD";
-return msg;
-```
+2. Colocamos bloque ```mqqtt out``` y configurar el bloque con el puerto mqtt out con el IP ```44.195.202.69:1883``` como se muestra en la imagen.
 
-![](https://github.com/Omarcollado23/PRACTICA-6-DHT22-CON-NODE-RED/blob/main/conf%20hum.png?raw=true)
-
-```
-msg.payload = msg.payload.DISTANCIA;
-msg.topic = "DISTANCIA";
-return msg;
-```
-![](https://github.com/Omarcollado23/PRACTICA-7-CON-ULTRASONICO/blob/main/code%20distancia.png?raw=true)
-
-5. Colocamos los bloques de chart y gauge.
-Los configuramos de la siguiente manera como se muestra en las siguientes imagenes.
-
-![](https://github.com/Omarcollado23/PRACTICA-8-DHT22-CON-ULTRASONICO/blob/main/conf%20temp.png?raw=true)
-
-![](https://github.com/Omarcollado23/PRACTICA-8-DHT22-CON-ULTRASONICO/blob/main/conf%20hum.png?raw=true)
-
-![](https://github.com/Omarcollado23/PRACTICA-8-DHT22-CON-ULTRASONICO/blob/main/conf%20dist.png?raw=true)
-
-![](https://github.com/Omarcollado23/PRACTICA-8-DHT22-CON-ULTRASONICO/blob/main/graficos.png?raw=true)
-
+![](https://github.com/Omarcollado23/PRACTICA-9-RELEVADOR-NODE-RED/blob/main/conf%20mqtt.png?raw=true)
 
 ## Resultados
 
-Cuando haya funcionado, la información obtenida del sensor **DHT22** Y **HC-SR04** los mandara a servidor cuando se haga conexión y los observaremos por medio del dashboard. 
+Cuando haya funcionado, la información obtenida los mandara a servidor cuando se haga conexión y los observaremos por medio del dashboard. 
 
 Al final el diagrama nos queda de la siguiente manera:
 
-![](https://github.com/Omarcollado23/PRACTICA-8-DHT22-CON-ULTRASONICO/blob/main/esquema.png?raw=true)
+![](https://github.com/Omarcollado23/PRACTICA-9-RELEVADOR-NODE-RED/blob/main/esquema.png?raw=true)
 
 Despues damos Clic en el boton donde dice ```Deploy``` para cargar el programa y despues oprimos la pestaña con una flechita señalnado hacia arriba en diagonal, como se muestra en la imagen. 
 
 ![](https://github.com/Omarcollado23/PRACTICA-7-CON-ULTRASONICO/blob/main/deploy.png?raw=true)
 
-Y veremos los resultados que manda el sensor al servidor como se muestra en la imagen.
+Y veremos los resultados que manda el sensor al servidor como se muestra en la imagen. y podemos observar que por medio del awitch podemos encender y apagar el LED, como se muestra en las imagenes. 
 
-![](https://github.com/Omarcollado23/PRACTICA-8-DHT22-CON-ULTRASONICO/blob/main/result%201.png?raw=true)
 
-![](https://github.com/Omarcollado23/PRACTICA-8-DHT22-CON-ULTRASONICO/blob/main/result2.png?raw=true)
-![]()
-![]()
-![]()
-
+![](https://github.com/Omarcollado23/PRACTICA-9-RELEVADOR-NODE-RED/blob/main/result%20off.png?raw=true)
+![](https://github.com/Omarcollado23/PRACTICA-9-RELEVADOR-NODE-RED/blob/main/resultado.png?raw=true)
 
 
 # Créditos
