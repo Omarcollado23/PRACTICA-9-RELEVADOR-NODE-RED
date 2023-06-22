@@ -1,5 +1,5 @@
 # RELAY CON NODE-RED (encender led)
-Este repositorio muestra como podemos programar una ESP32 con SR- y ocupando la plataforma node-red y ahi poder la distancia y almismo tiempo graficar los resultados obtenidos.
+Este repositorio muestra como podemos programar una ESP32 con un RELAY y encender el LED por medio de un botón (Switch)ocupando la plataforma node-red 
 
 
 ### Descripción
